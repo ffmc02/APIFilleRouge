@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.control.TextField?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gaetan.Gui.UserControleur">
+   <children>
+      <TableView layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colPseudo" prefWidth="75.0" text="PSeudo" />
+          <TableColumn fx:id="colMail" prefWidth="75.0" text="ColMail" />
+        </columns>
+      </TableView>
+      <Button fx:id="AddUser" layoutX="274.0" layoutY="26.0" mnemonicParsing="false" text="Ajouter" />
+      <Button fx:id="ModifyUser" layoutX="275.0" layoutY="89.0" mnemonicParsing="false" text="Modifier " textFill="#e38710" />
+      <Button layoutX="272.0" layoutY="167.0" mnemonicParsing="false" text="Supprimer" textFill="#d70606" />
+       <VBox fx:id="FormUser" alignment="TOP_CENTER" disable="true" layoutX="587.0" layoutY="77.0" prefHeight="345.0"
+             prefWidth="186.0" visible="false">
+           <children>
+               <Label alignment="BOTTOM_LEFT" text="Nom" textAlignment="CENTER"/>
+               <TextField fx:id="NameUser">
+                   <FontIcon fx:id="iconeN" iconColor="#a2d074" iconLiteral="fa-check-circle" iconSize="30" visible="false" />
+                   <Label fx:id="messageName" prefHeight="41.0" prefWidth="162.0" textFill="#d72121" wrapText="true" />
+                   <VBox.margin>
+                       <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                   </VBox.margin>
+               </TextField>
+               <Label alignment="BOTTOM_LEFT" text="Prenom" textAlignment="CENTER"/>
+               <TextField fx:id="FirstnameUser"/>
+               <FontIcon fx:id="iconeF" iconColor="#a2d074" iconLiteral="fa-check-circle" iconSize="30" visible="false" />
+               <Label fx:id="messageFirstname" textFill="#d72121" wrapText="true" />
+               <Label fx:id="CityV" alignment="BOTTOM_LEFT" text="Ville" textAlignment="CENTER"/>
+               <FontIcon fx:id="iconeC" iconColor="#a2d074" iconLiteral="fa-check-circle" iconSize="30" visible="false" />
+               <Label fx:id="messageCity"  textFill="#d72121" wrapText="true" />
+               <TextField fx:id="CityUser"/>
+               <HBox alignment="TOP_CENTER" prefHeight="116.0" prefWidth="186.0">
+                   <children>
+                       <Button fx:id="Validate" mnemonicParsing="false"  text="Valider"/>
+                       <Button fx:id="Return" mnemonicParsing="false"  text="Annuler "/>
+                   </children>
+               </HBox>
+           </children>
+       </VBox>
+       <Label fx:id="TitleForm" layoutX="666.0" layoutY="15.0"/>
+   </children>
+</AnchorPane>
